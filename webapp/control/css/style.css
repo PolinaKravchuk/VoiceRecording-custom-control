@@ -1,0 +1,90 @@
+.custom-voice-recording--control-container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: space-around;
+}
+.custom-voice-recording--recording-buttons-container {
+	height: 200px;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.custom-voice-recording--soc-toolbar {
+    margin: 5px;
+    display: flex;
+    justify-content: space-around;	
+}
+
+.custom-voice-recording--recording-btn-container {
+	width: 55%;
+	height: 100%;
+}
+
+.custom-voice-recording--recording-flag-container {
+	width: 20%;
+	height: 100%;
+}
+
+.custom-voice-recording--recording-button {
+	width: 70%;
+    display: inline-block;
+    background: none;
+    width: 50px;
+    border: 0;
+    outline: none;
+}
+
+.custom-voice-recording--recording-button-img {
+	border: 1px solid #6f9fcf;
+    box-shadow: 1px 1px #6f9fcf;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.custom-voice-recording--disabled {
+	opacity: 0.6;
+}
+
+.custom-voice-recording--recording-flag {
+	width: 15px;
+	height: 15px;
+	font-size: 0;
+	background-color: red;
+	border: 0;
+	border-radius: 35px;
+	margin: 18px;
+	outline: none;
+}
+.custom-voice-recording--notRec {
+	background-color: darkred;
+}
+
+.custom-voice-recording--rec {
+	animation-name: pulse;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes pulse {
+	0%{
+		box-shadow: 0px 0px 5px 0px rgba(173,0,0,.3);
+	}
+	65%{
+		box-shadow: 0px 0px 5px 13px rgba(173,0,0,.3);
+	}
+	90%{
+		box-shadow: 0px 0px 5px 13px rgba(173,0,0,0);
+	}
+}
+
+.custom-voice-recording--footer-container {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+

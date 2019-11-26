@@ -1,0 +1,42 @@
+<mvc:View controllerName="demo.meetup.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<OverflowToolbar>
+			                <ToolbarSpacer />
+			                <Button text="Record" press="onRecordPress" />
+			            </OverflowToolbar>
+			            
+			            <Table id="audioFilesTable"
+			            	items="{viewModel>/audiofiles}">
+			            	<columns>
+			            		<Column>
+			            			<Label text="Name" />
+			            		</Column>
+			            		<Column>
+			            			<Label text="Audio" />
+			            		</Column>
+			            	</columns>
+			            	<items>
+			            		<ColumnListItem>
+			            			<cells>
+			            				<Text id="textId" text="{viewModel>name}" />
+			            				<Link 
+			            					press="onAudioPress"
+			            					href="{viewModel>url}" 
+			            					text="{
+			            						path: 'viewModel>name',
+			            						formatter: '.formatter.formatName'
+			            					}" />
+			            			</cells>
+			            		</ColumnListItem>
+			            	</items>
+			            </Table>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

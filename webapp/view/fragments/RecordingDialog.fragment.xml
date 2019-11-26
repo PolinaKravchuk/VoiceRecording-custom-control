@@ -1,0 +1,26 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:cust="demo.meetup.control"
+	xmlns:core="sap.ui.core">
+
+	<Dialog
+		title="Record an audio"
+		contentHeight="320px">
+		<content>
+			<cust:VoiceRecording
+				audioName="{viewModel>/audioName}"
+				imageSource="images/test.png"
+				recordFinished="onRecordingFinished">
+				<cust:socicons>
+					<core:Icon src="sap-icon://call" />
+					<core:Icon src="sap-icon://letter" />
+				</cust:socicons>
+			</cust:VoiceRecording>
+
+		</content>
+		<buttons>
+			<Button text="{i18n>close}" press="onCancelPress" />
+		</buttons>
+	</Dialog>	
+
+</core:FragmentDefinition>
